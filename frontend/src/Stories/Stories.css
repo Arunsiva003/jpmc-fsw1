@@ -1,0 +1,39 @@
+.stories-page {
+    max-width: 1000px; /* Reduced from 1200px */
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+  }
+  
+  .story {
+    margin-bottom: 20px;
+    /* background-color: #f9f9f9; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+  }
+  
+  .story h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  .story p {
+    line-height: 1.6;
+    color: #c3c0c0;
+  }
+  
+  .stories-page h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .story img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  

@@ -1,0 +1,261 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* color: var(--color-white); */
+}
+
+:root{
+    --primary-hue: 210;
+    --gray-hue:240;
+    --color-primary:hsl(var(--primary-hue), 100%, 50%);
+    --color-primary-variant:hsl(var(--primary-hue), 100%, 65%);
+    --color-secondary:#ffb116;
+    --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+    --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
+    --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
+    --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
+    --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
+    --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
+
+    --container-width-lg:80%;
+    --container-width-md:90%;
+
+
+    --color-primary:#6c63ff;
+    --color-success:#00bf8e;
+    --color-warning:#f7c94b;
+    --color-danger:#f75842;
+    --color-danger-variant:rgba(247, 83, 66, 0.4);
+    --color-white:#fff;
+    --color-light:rgba(255, 255, 255, 0.7);
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+
+    --container-width-lg:76%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+
+    --transition: all 400ms ease;
+}
+
+/* GENERAL STYLES */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color:var(--color-gray-200);
+    line-height: 1.7;
+    overflow-x: hidden;
+    background: var(--color-gray-600);
+    background-image: url(../src/images/bg-texture.png);
+}
+
+.container{
+    width: var(--container-width-lg);
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5 {
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.4rem;
+}
+
+a{
+    color: var(--color-white);
+}
+
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.btn {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+
+.btn:hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn.lg {
+ 
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+.btn.sm {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+.btn.sm:hover {
+    background: var(--color-gray-100);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{
+    margin-top: 10rem;
+        padding: 6rem 0;
+}
+.section_head {
+    text-align: center;
+    color: var(--color-white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card{
+    background: var(--color-gray-500);
+    border: 2px solid transparent;
+    text-align: center;
+
+ 
+    transition: var(--transition);
+}
+
+.card:hover{
+    background:transparent;
+    border-color: var(--color-gray-400);
+    cursor: default;
+}
+
+.card h4{
+    color: var(--color-white);
+}
+.card span{
+
+   
+  
+    font-size: 1.5rem;
+
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+    margin-inline: auto;
+    
+    transition: var(--transition);
+}
+
+.card small{
+    margin-top: 1rem;
+    display: block;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+/*MEDIA QUERIES (medium screens)*/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+/*MEDIA QUERIES (small screens)*/
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+}

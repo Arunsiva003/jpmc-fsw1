@@ -1,0 +1,553 @@
+.main_header {
+    width: 100vw;
+    height: cal(100vh - 10rem);
+    display: grid;
+    place-items: center;
+    margin-top: 10rem;
+}
+
+.main_header-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+
+.main_header-left p {
+    margin: 1rem 0 3.5rem;
+    font-size: 1.1rem;
+}
+
+.main_header-right{
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.main_header-image{
+    position: relative;
+}
+
+
+
+
+
+
+
+/* ============================================== CATEGORIES ==============================================*/
+
+
+.categories {
+    background: var(--color-bg1);
+    height: 32rem;
+}
+
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.categories_container { 
+    display: grid;
+    grid-template-columns: 40% 60%;
+   
+}
+.categories_left {
+    margin-right: 4rem;
+} 
+
+.categories_left p {
+    margin: 1rem 0 3rem;
+}
+
+.categories_right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.category {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.category:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+.category:nth-child(2) .category_icon{
+    background: var(--color-danger);
+}
+
+.category:nth-child(3) .category_icon{
+    background: var(--color-success);
+}
+
+.category:nth-child(4) .category_icon{
+    background: var(--color-warning);
+}
+
+.category:nth-child(5) .category_icon{
+    background: var(--color-success);
+}
+
+
+.category_icon{
+    background-color: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+
+.category h5{
+    margin: 2rem 0 1rem;
+}
+
+.category p{
+    font-size: 0.85rem;
+}
+
+
+
+/* ==============================================PROGRAMS==============================================*/
+.programs{
+    margin-top: 15rem;
+}
+.programs_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.programs_program a{
+    width: 12rem;
+    margin-left: 3.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programs_program a:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+
+
+
+
+/* ============================================== FAQS ==============================================*/
+
+.section{
+    background: #171747;
+    box-shadow: inset  0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.faqs_wrapper{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 5rem;
+    align-items: flex-start;
+   
+}
+
+.faq {
+    background: var(--color-primary);
+    padding: 2rem;
+
+    cursor: pointer;
+}
+
+
+.faq div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq div h4{
+    font-size: 1.1rem;
+}
+.faq_icon{
+    background: transparent;
+    color: var(--color-gray-100);
+    font-size: 1.5rem;
+}
+
+.faq p{
+    margin-top: 1.5rem;
+}
+
+
+
+
+
+/* ==================== Testimonials ====================== */
+
+.testimonials_container {
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+    background-color: none;
+}
+.testimonials_container .card{
+    background: none;
+    border: none;
+}
+.testimonial {
+    padding-top: 2rem;
+    
+}
+
+.testimonial_avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+}
+
+.testimonial_quote {
+    text-align: center;
+}
+
+.testimonial_quote {
+    background-color: var(--color-primary);
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.testimonial_quote::before {
+    content: "";
+    display: block;
+    background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary), var(--color-primary));
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+
+
+.testimonials_btn-container{
+    width: fit-content;
+    margin: 2.5rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonials_btn {
+    background: transparent;
+    cursor: pointer;
+}
+
+.testimonials_btn svg{
+    fill: var(--color-primary);
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================== FOOTER ==============================================*/
+
+footer {
+
+    margin-top: 7rem;
+    padding-top: 7rem;
+    font-size: 0.9rem;
+   
+    background: var(--color-bg2);
+    color: var(--color-white);
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer_container article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.footer_container article p {
+    margin-top: 0.5rem;
+}
+
+.footer_container article h4{
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+.footer_socials {
+   
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer_socials a {
+
+    padding: 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    transition: var(--transition);
+}
+
+.footer_socials a svg {
+    color: var(--color-gray-600);
+}
+
+.footer_socials a:hover {
+    border-color: var(--color-gray-100);
+    background: transparent;
+}
+
+.footer_copyright{
+    color: var(--color-gray-100);
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--color-primary-variant);
+    margin-top: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES (medium screens)*/
+
+@media screen and (max-width: 1024px) {
+    /*MAIN HEADER*/
+    .main_header{
+        height: fit-content;
+      
+    }
+    .main_header-container{
+        gap: 0;
+    }
+    .main_header-circle{
+        width: 16rem;
+        height: 16rem;
+    }
+
+  /* ======================== Categories ================== */
+  .categories {
+    height: auto;
+}
+
+.categories_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.categories_left {
+    margin-right: 0;
+}
+
+
+    /* PROGRAMS */
+    .programs_wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+
+ 
+
+
+        /*FAQs*/
+    .faqs_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+        /*TESTIMONIALS*/
+    .testimonials {
+        width: 100%;
+    }
+
+    /*FOOTER*/
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES (small screens)*/
+
+@media screen and (max-width: 600px) {
+    /* MAIN HEADER */
+    .main_header{
+        margin-top: 0;
+        padding: 8rem 0 0;
+        height: 100vh;
+    }
+
+   
+
+    .main_header-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: -2rem;
+    }
+
+
+
+    
+     /* ================== Categories =================*/
+
+     .categories_right {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .category {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .category_icon {
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+
+
+    /* PROGRAM */
+    .programs_wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    .programs_program {
+        width: 84%;
+        margin: 0 auto;
+    }
+
+    /* FAQs*/
+    .faqs_wrapper {
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: 7rem;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer_container article {
+        align-items: center;
+    }
+
+    .footer_container article p {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES (medium screens)*/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+/*MEDIA QUERIES (small screens)*/
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+}
