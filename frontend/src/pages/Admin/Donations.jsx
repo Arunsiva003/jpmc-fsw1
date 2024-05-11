@@ -4,7 +4,7 @@ const DonationDashboard = () => {
     const [donations, setDonations] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:8080/donations')
+        fetch('https://jpmc-fsw1.onrender.com/donations')
            .then(response => response.json())
            .then(data => setDonations(data));
     }, []);

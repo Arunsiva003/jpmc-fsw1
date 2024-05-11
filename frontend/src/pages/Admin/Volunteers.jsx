@@ -4,7 +4,7 @@ const VolunteerTable = () => {
     const [volunteers, setVolunteers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/volunteers')
+        fetch('https://jpmc-fsw1.onrender.com/volunteers')
          .then(response => response.json())
          .then(data => {console.log(data);setVolunteers(data)});
     }, []);

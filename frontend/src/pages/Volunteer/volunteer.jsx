@@ -21,7 +21,7 @@ const VolunteerPage = () => {
   const onSubmit = async data => {
     try {
       console.log(data);
-        const response = await fetch('http://localhost:8080/volunteers', {
+        const response = await fetch('https://jpmc-fsw1.onrender.com/volunteers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

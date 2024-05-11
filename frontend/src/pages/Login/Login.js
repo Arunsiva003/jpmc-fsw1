@@ -18,7 +18,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
         console.log("submittng")
-      const response = await axios.post('http://localhost:8080/login', { username, password });
+      const response = await axios.post('https://jpmc-fsw1.onrender.com/login', { username, password });
       localStorage.setItem('token', response.data.token); // Store the token
       setError('');
       console.log(response.data.userId);

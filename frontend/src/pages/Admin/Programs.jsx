@@ -10,7 +10,7 @@ const ProgramsDashboard = () => {
 
     useEffect(() => {
         const fetchPrograms = async () => {
-            const { data } = await axios.get('http://localhost:8080/programs');
+            const { data } = await axios.get('https://jpmc-fsw1.onrender.com/programs');
             setPrograms(data);
             if (data.length === 0) {
                 setShowIcon(true); // Show icon if no data is found
@@ -24,7 +24,7 @@ const ProgramsDashboard = () => {
     const handleAddProgram = async () => {
         try {
             setPrograms([...programs, { name: newProgramName, description: newProgramDescription }]);
-            const { data } = await axios.post('http://localhost:8080/programs', { name: newProgramName, description: newProgramDescription });
+            const { data } = await axios.post('https://jpmc-fsw1.onrender.com/programs', { name: newProgramName, description: newProgramDescription });
             setNewProgramName('');
             setNewProgramDescription('');
             // window.location.reload();
@@ -35,7 +35,7 @@ const ProgramsDashboard = () => {
 
     const handleDeleteProgram = async (id) => {
         try {
-            await axios.delete(`http://localhost:8080/programs/${id}`);
+            await axios.delete(`https://jpmc-fsw1.onrender.com/programs/${id}`);
             setPrograms(programs.filter(program => program.id!== id));
         } catch (error) {
             console.error(error);
