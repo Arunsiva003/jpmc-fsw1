@@ -49,6 +49,7 @@ app.post('/login', async (req, res) => {
 app.get('/programs', async (req, res) => {
     try {
         const [rows] = await pool.execute('SELECT * FROM programs');
+        //send data 
         res.json(rows);
     } catch (error) {
         console.error(error);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import course1 from "../../images/bhumi21.jpg"; // Replace with actual path
 import course2 from "../../images/course2.jpg"; // Replace with actual path
 import course3 from "../../images/course3.jpg"; // Replace with actual path
@@ -19,11 +19,54 @@ import course17 from "../../images/bhumi15.jpg"; // Replace with actual path
 import course18 from "../../images/bhumi23.jpg"; // Replace with actual path
 import course19 from "../../images/bhumi22.jpg"; // Replace with actual path
 import course20 from "../../images/bhumi21.jpg"; // Replace with actual path
-
 import "./Course.css";
 import SectionHead from '../../components/SectionHead';
 
+const images = [
+  course1,
+  // course2,
+  // course3,
+  // course4,
+  // course5,
+  // course6,
+  // course7,
+  // course8,
+  // course9,
+  course10,
+  course11,
+  course12,
+  course13,
+  course14,
+  course15,
+  course16,
+  course17,
+  course18,
+  course19,
+  course20
+];
+
 const Course = () => {
+
+  const [programs, setPrograms] = useState([]); // Initialize state to hold programs data
+  const [randomImageIndex, setRandomImageIndex] = useState(0); 
+  useEffect(() => {
+    const response = fetch('https://jpmc-fsw1.onrender.com/programs');
+    response.then(res => res.json()).then(data => setPrograms(data));
+  },[])
+
+  // Function to select a random image
+  const getRandomImage = () => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return randomIndex;
+  };
+
+  // Call getRandomImage initially to set a random image
+  useEffect(() => {
+    getRandomImage();
+  }, []);
+
+  console.log(programs);
+
   return (
     <section className="courses">
       <SectionHead title="Our Programs"/>
@@ -53,7 +96,7 @@ const Course = () => {
             <p>
               Bhumi NGO collaborates with healthcare providers to offer free medical check-ups, vaccinations, and health awareness programs to underprivileged communities. Our goal is to promote health and wellness.
             </p>
-            <a href="https://www.bhumingo.org/healthcare" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -65,7 +108,7 @@ const Course = () => {
             <p>
               We run nutrition programs to ensure that underprivileged children receive nutritious meals, which are essential for their growth and development. Our programs focus on providing balanced diets.
             </p>
-            <a href="https://www.bhumingo.org/nutrition" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -77,7 +120,7 @@ const Course = () => {
             <p>
               Bhumi NGO's mentorship programs pair underprivileged children with mentors who provide guidance, support, and role models. These relationships help children navigate academic and personal challenges.
             </p>
-            <a href="https://www.bhumingo.org/mentorship" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -89,7 +132,7 @@ const Course = () => {
             <p>
               Sports programs are offered to encourage physical activity and teamwork among underprivileged children. These programs also serve as a platform for children to develop leadership skills and confidence.
             </p>
-            <a href="https://www.bhumingo.org/sports" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -101,7 +144,7 @@ const Course = () => {
             <p>
               Bhumi NGO believes in the power of art and culture to inspire and uplift. Our art and culture programs provide underprivileged children with opportunities to express themselves creatively and learn about their heritage.
             </p>
-            <a href="https://www.bhumingo.org/art-culture" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -113,7 +156,7 @@ const Course = () => {
             <p>
               To foster a sense of responsibility towards the environment, Bhumi NGO runs environmental awareness programs. These programs educate children about the importance of conservation and sustainable living.
             </p>
-            <a href="https://www.bhumingo.org/environment" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -125,7 +168,7 @@ const Course = () => {
             <p>
               Bhumi NGO provides career guidance to underprivileged children, helping them explore various career paths and understand the educational requirements for their chosen fields.
             </p>
-            <a href="https://www.bhumingo.org/career-guidance" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -137,7 +180,7 @@ const Course = () => {
             <p>
               With the increasing reliance on technology, Bhumi NGO offers digital literacy programs to underprivileged children. These programs teach basic computer skills and internet safety.
             </p>
-            <a href="https://www.bhumingo.org/digital-literacy" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
         <article className="course">
@@ -149,10 +192,28 @@ const Course = () => {
             <p>
               During times of crisis, Bhumi NGO provides emergency relief to underprivileged families. This includes food, shelter, and medical aid to ensure their immediate needs are met.
             </p>
-            <a href="https://www.bhumingo.org/emergency-relief" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            <a href="/programdetails" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
           </div>
         </article>
       </div>
+
+      <section className="courses">
+      <div className="container courses_container">
+        {programs.map(program => ( // Map over the programs data to render each program
+          <article key={program.id} className="course">
+            <div className="course_image">
+              <img src={images[getRandomImage()]} alt={program.name} /> {/* Assuming each program object has an image property */}
+            </div>
+            <div className="course_info">
+              <h4>{program.name}</h4>
+              <p>{program.description}</p>
+              <a href={`/programdetails`} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
+            </div>
+          </article>
+        ))}
+      </div>
+      </section>
+
     </section>
   );
 };
